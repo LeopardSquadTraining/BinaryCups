@@ -3,9 +3,7 @@ package leopard.squad.training;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by ketaki.sharma on 18/12/2017.
- */
+
 public class BinaryCups {
 
     CupOrder cupOrder;
