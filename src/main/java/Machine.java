@@ -2,13 +2,14 @@
 public class Machine {
 
     public Machine(){
-
     }
 
     public int getCost(int cap){
         Delivery d = new Delivery(cap);
         this.calculate(d);
-        return d.getCost();
+        int totalCost=d.getCupCost();
+        System.out.println(d.getCupsUsed());
+        return totalCost;
     }
     public void calculate(Delivery d) {
         if (d.capacity > 9 ){
