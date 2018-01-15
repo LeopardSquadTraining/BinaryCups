@@ -1,6 +1,4 @@
-/**
- * Created by robert.lilleker on 08/01/2018.
- */
+
 public class Delivery {
     public int capacity;
     public boolean XL = false;

@@ -1,6 +1,4 @@
-/**
- * Created by robert.lilleker on 08/01/2018.
- */
+
 public class Machine {
 
     public Machine(){
@@ -12,7 +10,6 @@ public class Machine {
         this.calculate(d);
         return d.getCost();
     }
-
     public void calculate(Delivery d) {
         if (d.capacity > 9 ){
             d.XL = true;
@@ -30,7 +27,6 @@ public class Machine {
             d.S = true;
             d.capacity = d.capacity - 2;
         }
-
         if (d.capacity > 0){
             calculate(d);
         }
