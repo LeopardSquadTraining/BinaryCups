@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Machine {
 
@@ -7,10 +10,24 @@ public class Machine {
     public int getCost(int cap){
         Delivery d = new Delivery(cap);
         this.calculate(d);
-        int totalCost=d.getCupCost();
-        System.out.println(d.getCupsUsed());
+        int totalCost = d.getCupCost();
         return totalCost;
     }
+
+    public Map<String, Integer> getOrder(int cap){
+        Delivery d = new Delivery(cap);
+        this.calculate(d);
+        int totalCost = d.getCupCost();
+
+        System.out.println(d.getCupsUsed());
+
+        // create the key value pair map of cups used
+
+        Map<String, Integer> cupsUsed = d.getCupsUsed();
+
+        return cupsUsed;
+    }
+
     public void calculate(Delivery d) {
         if (d.capacity > 9 ){
             d.XL = true;

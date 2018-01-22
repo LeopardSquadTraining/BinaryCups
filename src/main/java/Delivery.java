@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Delivery {
     public int capacity;
@@ -7,36 +7,36 @@ public class Delivery {
     public boolean L = false;
     public boolean M = false;
     public boolean S = false;
-    private List<String> cupsUsed;
+    private Map<String, Integer> cupsUsed;
 
     public Delivery (int cap)
     {
         this.capacity = cap;
-        this.cupsUsed=new ArrayList<>();
+        this.cupsUsed = new HashMap<>();
     }
 
     public int getCupCost (){
         int x=0;
         if (XL) {
             x=x+8;
-            cupsUsed.add("XL");
+            cupsUsed.put("XL", 0);
         }
         if (L) {
             x=x+4;
-            cupsUsed.add("L");
+            cupsUsed.put("L", 0);
         }
         if (M) {
             x=x+2;
-            cupsUsed.add("M");
+            cupsUsed.put("M", 0);
         }
         if (S) {
             x=x+1;
-            cupsUsed.add("S");
+            cupsUsed.put("S", 0);
         }
         return x;
     }
 
-    public List<String> getCupsUsed() {
+    public Map<String, Integer> getCupsUsed() {
         return cupsUsed;
     }
 }
